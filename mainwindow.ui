@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>180</width>
+    <height>303</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="expression">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>171</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	qproperty-alignment: 'AlignVCenter|AlignRight';
+	border-bottom: 1px solid gray
+}
+
+background-color: white
+</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_clear">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>78</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+	background-color: rgb(215,215,215)
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #bebebe, stop: 1 #d7d7d7);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>AC</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_percent">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>78</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+	background-color: rgb(215,215,215)
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #bebebe, stop: 1 #d7d7d7);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>%</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_sqrt">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>78</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+	background-color: rgb(215,215,215)
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #bebebe, stop: 1 #d7d7d7);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>√</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_del">
+    <property name="geometry">
+     <rect>
+      <x>135</x>
+      <y>78</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+	background-color: rgb(255,151,57);
+	color: white;
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #ff7832, stop: 1 #ff9739);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>÷</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_8">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>123</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>8</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_9">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>123</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>9</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_7">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>123</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>7</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_mult">
+    <property name="geometry">
+     <rect>
+      <x>135</x>
+      <y>123</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+	background-color: rgb(255,151,57);
+	color: white;
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #ff7832, stop: 1 #ff9739);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>x</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_6">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>168</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>6</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_3">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>213</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_plus">
+    <property name="geometry">
+     <rect>
+      <x>135</x>
+      <y>213</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+	background-color: rgb(255,151,57);
+	color: white;
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #ff7832, stop: 1 #ff9739);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_minus">
+    <property name="geometry">
+     <rect>
+      <x>135</x>
+      <y>168</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+	background-color: rgb(255,151,57);
+	color: white;
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #ff7832, stop: 1 #ff9739);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_2">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>213</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>168</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_1">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>213</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_5">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>168</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>5</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_takeres">
+    <property name="geometry">
+     <rect>
+      <x>135</x>
+      <y>258</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+	background-color: rgb(255,151,57);
+	color: white;
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #ff7832, stop: 1 #ff9739);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>=</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_0">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>258</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_pm">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>258</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+	background-color: rgb(215,215,215)
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #bebebe, stop: 1 #d7d7d7);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>±</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_point">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>258</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid gray;
+	background-color: rgb(215,215,215)
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #bebebe, stop: 1 #d7d7d7);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="result">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	qproperty-alignment: 'AlignVCenter|AlignRight';
+	border-bottom: 1px solid gray
+}
+
+background-color: white
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
