@@ -1,3 +1,3 @@
-# calculator3000
-Desktop calculator on QT and C++
+# Calculator3000
 
+Desktop calculator on QT and C++
